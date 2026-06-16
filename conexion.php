@@ -1,12 +1,10 @@
 <?php
-$conexion = new mysqli(
-    "localhost",
-    "root",
-    "Karolina45",
-    "formweb_db"
-);
+$host     = "://aivencloud.com"; // El "Host" de Aiven
+$port     = "12345";                       // El "Port" de Aiven
+$user     = "avnadmin";                    // El "User" de Aiven
+$password = "tu_contraseña_de_aiven";      // La contraseña de Aiven
+$dbname   = "defaultdb";                   // Tu base de datos
 
-if ($conexion->connect_error) {
-    die("Error de conexión: " . $conexion->connect_error);
-}
+$conexion = mysqli_connect($host, $user, $password, $dbname, $port);
+
 ?>
